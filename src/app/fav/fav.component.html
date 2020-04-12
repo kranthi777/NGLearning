@@ -1,0 +1,30 @@
+<p>fav works!</p>
+<h2>{{user.city}}</h2>
+<ng-content ></ng-content>
+
+
+<button (click)='onButtonClick()'>send data to parent</button>
+
+<!--Directive-->
+
+<h1 *ngIf=flag>ngIf only show if flas is true</h1>
+<button (click)='onButtonToggle()'>{{flag ? 'hide': 'show'}}</button>
+
+<br>
+<br>
+<div *ngIf=flag>
+    <ul *ngFor="let item of persons">
+  
+        <li>
+          {{item.name}} {{item.age}}
+        </li>
+    </ul>
+</div>
+
+<!--custompipe-->
+
+<ul *ngFor="let item of myArray | even">
+    <li>
+        {{item}}
+    </li>
+</ul>

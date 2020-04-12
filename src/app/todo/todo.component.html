@@ -1,0 +1,23 @@
+<h1 class="app-fav-wrapper">TODO APP</h1>
+<div id="myDIV" class="header">
+    <h2>My To Do List</h2>
+    <form>
+        <input name="myInput" type="text" [(ngModel)]='inputValue' placeholder="Title...">
+        <input type="submit" (click)="onTodoAdd()" class="addBtn" value="Add Task"/>
+    </form>
+</div>
+  
+  <!--if we want to use splice instead of filter pass index like below
+    <ul id="myUL" *ngFor='let item of items; let i=index'>
+        <li (click)='removeTodo(i)'>{{item}}</li>
+    </ul>
+  -->
+  <ul id="myUL" *ngFor='let item of items'>
+    <li (click)='removeTodo(item)'>{{item}}</li>
+  </ul>
+
+  <h1>showing sample users using Dependency Injection</h1>
+
+  <ul id="myUL" *ngFor='let person of persons'>
+    <li>{{person.name}}</li>
+  </ul>

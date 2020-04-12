@@ -1,0 +1,48 @@
+<!--class binding-->
+<p [class]="BackgroundRed">Hello {{name}}</p>
+
+<br>
+<!--style binding-->
+<h2 [style.color]="color">Kranthi</h2>
+<div [style.font-size.px]="24">some text</div>
+<div [style.color]="flag? 'blue' : 'green'">changing color by flag</div>
+
+<!--Interpolation:-->
+<input type="text" value={{name}} id="input1" disabled={{flag}} />
+
+<br>
+
+<!--We only use property binding to set non string value-->
+<!--PropertyBinding:-->
+<input type="text" [value]='lastName' id="input2" [disabled]='flag' />
+
+<br>
+
+
+<!--Event Binding-->
+<button (click)='show()'>click</button>
+<p *ngIf='hideOrShow'>hide/show based on button click</p>
+
+<br>
+<br>
+<!--Template Variable-->
+<!--on enter key press logging the value-->
+<input #templateInput type="text" (keyup.enter)="onInputClick(templateInput)" placeholder="enter" /> 
+<!--here passing input id to button-->
+<button (click)="onInputClick(templateInput)">log input value</button>
+
+<br>
+<br>
+
+<!--View Child-->
+<input #viewChildInput type="text" placeholder="enter" /> 
+
+
+<br>
+<br>
+<br>
+<!--ng-model ** TWO way data binding-->
+<input [(ngModel)]='city' type="text" required />
+
+<p>city is : {{city}}</p>
+
