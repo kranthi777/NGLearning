@@ -1,3 +1,5 @@
+import { fn } from "@angular/compiler/src/output/output_ast";
+
 var x:number;
 x =10;
 console.log(x);
@@ -32,3 +34,17 @@ var p;
 p =10;
 
 p
+
+class Person {
+    constructor(protected fname:string,protected lname:string) {
+        // this.fname = fname;
+        // this.lname = lname;
+    }
+    getFullName():string{
+        return this.fname + ' ' + this.lname;
+    }
+}
+
+var emp1 = new Person('k','kumar');
+
+console.log(emp1.getFullName);

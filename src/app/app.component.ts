@@ -18,10 +18,19 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    console.log("before API call");
+    //console.log("before API call");
     let obs = this.http.get('https://api.github.com/users/kranthi777');
-    obs.subscribe((res)=>{console.log(res);console.log("after API success");});
-    console.log("after API Done");
+    obs.subscribe((res)=>{
+      console.log(res);
+      //console.log("after API success");
+    });
+    //console.log("after API Done");
+  }
+
+  changeCount() {
+    //console.log(this.passNumber);
+    //this.passNumber['x'] = this.passNumber['x']+1;
+    this.passNumber = this.passNumber+1;
   }
   title = 'kranthi';
   appData = {
@@ -29,4 +38,10 @@ export class AppComponent {
     'city': 'BLR'
   }
   message = ''
+  passNumber = 1;
+  //passNumber as object
+  // passNumber = {
+  //   "x":1,
+  //   "y":2
+  // }
 }
