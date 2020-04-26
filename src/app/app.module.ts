@@ -20,6 +20,7 @@ import { AuthInterceptorService } from './http/auth-interceptor.service';
 import { PipeComponent } from './pipe/pipe.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { ShortenPipe } from './pipe/shorten.pipe';
+import { UnitTestComponent } from './unit-test/unit-test.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ShortenPipe } from './pipe/shorten.pipe';
     HttpComponent,
     PipeComponent,
     ShortenPipe,
-    FilterPipe
+    FilterPipe,
+    UnitTestComponent
   ],
   imports: [
     BrowserModule,

@@ -19,11 +19,11 @@ export class AppComponent {
 
   ngOnInit() {
     //console.log("before API call");
-    let obs = this.http.get('https://api.github.com/users/kranthi777');
-    obs.subscribe((res)=>{
-      console.log(res);
+    //let obs = this.http.get('https://api.github.com/users/kranthi777');
+    //obs.subscribe((res)=>{
+      //console.log(res);
       //console.log("after API success");
-    });
+    //});
     //console.log("after API Done");
   }
 
